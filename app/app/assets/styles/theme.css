@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+html { min-width: 320px; background: var(--page); scroll-behavior: smooth; }
+body { margin: 0; background: var(--page); color: var(--text); font-family: var(--font-family-sans); }
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+button, a, input, textarea, select { outline-color: var(--focus); }

@@ -1,0 +1,153 @@
+{
+  "common": {
+    "home": "Главная",
+    "navigation": "Основная навигация",
+    "details": "Подробнее",
+    "loading": "Загрузка…",
+    "requestFailed": "Не удалось выполнить запрос"
+  },
+  "nav": {
+    "catalog": "Каталог",
+    "docs": "Разработчикам",
+    "dashboard": "Мои плагины",
+    "moderation": "Модерация",
+    "login": "Войти",
+    "logout": "Выйти"
+  },
+  "theme": { "toggle": "Переключить тему" },
+  "footer": { "description": "Проверяемый каталог community-плагинов для локального рабочего пространства Neuro Notes." },
+  "home": {
+    "eyebrow": "Community marketplace",
+    "title": "Расширяйте Neuro Notes безопасными плагинами",
+    "description": "Находите расширения, изучайте разрешения и публикуйте плагины из проверяемых GitHub releases.",
+    "openCatalog": "Открыть каталог",
+    "readDocs": "Изучить API v1",
+    "latest": "Новые плагины",
+    "latestDescription": "Последние версии, прошедшие ручную модерацию.",
+    "features": {
+      "review": { "title": "Ручная модерация", "description": "Каждый релиз и manifest проверяются до появления в публичном каталоге." },
+      "contract": { "title": "Честный контракт", "description": "Документация разделяет работающие возможности API v1 и запланированные расширения." },
+      "github": { "title": "Исходники на GitHub", "description": "Площадка не исполняет и не перехостит код: пользователю показывается точный release и commit." }
+    }
+  },
+  "catalog": {
+    "eyebrow": "Плагины Neuro Notes",
+    "title": "Каталог",
+    "description": "Публичные community-плагины с manifest, разрешениями, compatibility warnings и историей версий.",
+    "search": "Поиск",
+    "searchPlaceholder": "Название, ID или описание",
+    "category": "Категория",
+    "allCategories": "Все категории",
+    "sort": "Сортировка",
+    "sortNewest": "Сначала новые",
+    "sortOldest": "Сначала старые",
+    "sortName": "По названию",
+    "emptyTitle": "Опубликованных плагинов пока нет",
+    "emptyDescription": "Каталог заполняется только после проверки GitHub release и одобрения администратора.",
+    "publishFirst": "Предложить первый плагин",
+    "noDescription": "Автор пока не добавил описание."
+  },
+  "categories": {
+    "productivity": "Продуктивность",
+    "editor": "Редактор",
+    "ai": "Искусственный интеллект",
+    "import-export": "Импорт и экспорт",
+    "integrations": "Интеграции",
+    "utilities": "Инструменты",
+    "appearance": "Оформление",
+    "other": "Другое"
+  },
+  "plugin": {
+    "description": "Описание",
+    "manifest": "Manifest",
+    "versions": "История версий",
+    "openRelease": "Открыть GitHub release",
+    "repository": "Репозиторий",
+    "author": "Автор",
+    "runtime": "Runtime",
+    "apiVersion": "API version",
+    "published": "Опубликован",
+    "categories": "Категории"
+  },
+  "compatibility": {
+    "title": "Ограничения совместимости",
+    "warningCount": "Предупреждений: {count}",
+    "warnings": {
+      "runtime-system-community": "System runtime не предназначен для community-плагинов.",
+      "runtime-iframe-disabled": "Iframe runtime заявлен в схеме, но пока отключён в клиенте.",
+      "settings-ui-unavailable": "Community settings UI пока недоступен в Worker runtime.",
+      "ai-tools-experimental": "Регистрация AI tools экспериментальна и пока не предоставляет полный execution API.",
+      "markdown-extensions-unavailable": "Markdown extensions ещё не подключены к community runtime.",
+      "note-types-unavailable": "Пользовательские note types пока не подключены.",
+      "views-unavailable": "Пользовательские views пока не подключены.",
+      "vault-api-unavailable": "Vault permission распознаётся, но Worker RPC для файлов ещё недоступен.",
+      "network-api-unavailable": "Прямой network access заблокирован, а host fetch RPC ещё недоступен.",
+      "clipboard-api-unavailable": "Clipboard RPC ещё недоступен в community runtime.",
+      "editor-api-unavailable": "Editor RPC ещё недоступен в community runtime.",
+      "native-api-unavailable": "Native capability RPC ещё недоступен в community runtime."
+    }
+  },
+  "auth": {
+    "title": "Вход через Neuro Notes",
+    "description": "Используйте существующий аккаунт Neuro Notes. Пароль передаётся только identity backend и не сохраняется площадкой.",
+    "identity": "Username или email",
+    "password": "Пароль",
+    "login": "Войти",
+    "failed": "Не удалось войти",
+    "totpTitle": "Двухфакторная проверка",
+    "totpDescription": "Введите код приложения-аутентификатора или recovery code.",
+    "totpCode": "Код",
+    "verify": "Подтвердить"
+  },
+  "dashboard": {
+    "title": "Публикации",
+    "description": "Отправляйте новые плагины, версии и изменения описаний на ручную модерацию.",
+    "newSubmission": "Новая заявка",
+    "emptyTitle": "Заявок пока нет",
+    "emptyDescription": "Укажите публичный GitHub repository и опубликованный release, чтобы начать проверку."
+  },
+  "submission": {
+    "status": { "pending": "На модерации", "approved": "Опубликовано", "rejected": "Отклонено" }
+  },
+  "publish": {
+    "title": "Отправить плагин",
+    "description": "Площадка проверит public repository, release, manifest и entry-файл. Код не исполняется.",
+    "kind": "Тип заявки",
+    "kinds": { "new_plugin": "Новый плагин", "new_version": "Новая версия", "metadata_update": "Изменить описание" },
+    "repository": "GitHub repository",
+    "releaseTag": "Release tag",
+    "manifestPath": "Путь к manifest",
+    "categories": "Категории — не более трёх",
+    "translations": "Необязательные переводы",
+    "summaryRu": "Кратко на русском",
+    "summaryEn": "Summary in English",
+    "descriptionRu": "Описание на русском",
+    "descriptionEn": "Description in English",
+    "validate": "Проверить GitHub",
+    "submit": "Отправить на модерацию"
+  },
+  "moderation": {
+    "title": "Очередь модерации",
+    "description": "Проверьте исходники, manifest и warnings перед публикацией immutable версии.",
+    "reason": "Комментарий модератора",
+    "approve": "Одобрить",
+    "reject": "Отклонить",
+    "emptyTitle": "Очередь пуста",
+    "emptyDescription": "Новых заявок на проверку нет."
+  },
+  "docs": {
+    "title": "Документация разработчика",
+    "description": "Фактический контракт community plugin API v1 и ограничения текущего Worker runtime.",
+    "navigation": "Разделы документации"
+  },
+  "seo": {
+    "homeTitle": "Neuro Notes Plugins — каталог расширений",
+    "homeDescription": "Каталог, документация и публикация community-плагинов Neuro Notes.",
+    "catalogTitle": "Каталог плагинов — Neuro Notes",
+    "docsTitle": "Разработка плагинов — Neuro Notes",
+    "loginTitle": "Вход — Neuro Notes Plugins",
+    "dashboardTitle": "Мои публикации — Neuro Notes Plugins",
+    "publishTitle": "Опубликовать плагин — Neuro Notes",
+    "moderationTitle": "Модерация — Neuro Notes Plugins"
+  }
+}

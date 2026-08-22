@@ -1,0 +1,12 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/roboto-mono/400.css";
+@import "@fontsource/roboto-mono/500.css";
+@import "@neuro-notes/design-tokens/theme.css";
+@import "tailwindcss";
+@import "./theme.css";
+@import "./components.css";
+
+@custom-variant dark (&:where(.dark, .dark *));

@@ -1,0 +1,153 @@
+{
+  "common": {
+    "home": "Home",
+    "navigation": "Main navigation",
+    "details": "Details",
+    "loading": "Loading…",
+    "requestFailed": "The request could not be completed"
+  },
+  "nav": {
+    "catalog": "Catalog",
+    "docs": "Developers",
+    "dashboard": "My plugins",
+    "moderation": "Moderation",
+    "login": "Sign in",
+    "logout": "Sign out"
+  },
+  "theme": { "toggle": "Toggle theme" },
+  "footer": { "description": "A review-based catalog of community plugins for the local-first Neuro Notes workspace." },
+  "home": {
+    "eyebrow": "Community marketplace",
+    "title": "Extend Neuro Notes with safer plugins",
+    "description": "Discover extensions, inspect permissions, and publish plugins from verifiable GitHub releases.",
+    "openCatalog": "Open catalog",
+    "readDocs": "Explore API v1",
+    "latest": "New plugins",
+    "latestDescription": "The latest releases that passed manual moderation.",
+    "features": {
+      "review": { "title": "Manual moderation", "description": "Every release and manifest is checked before it appears in the public catalog." },
+      "contract": { "title": "Honest contract", "description": "Documentation separates working API v1 capabilities from planned extensions." },
+      "github": { "title": "Source on GitHub", "description": "The marketplace neither executes nor rehosts code; users see the exact release and commit." }
+    }
+  },
+  "catalog": {
+    "eyebrow": "Neuro Notes plugins",
+    "title": "Catalog",
+    "description": "Public community plugins with manifests, permissions, compatibility warnings, and version history.",
+    "search": "Search",
+    "searchPlaceholder": "Name, ID, or description",
+    "category": "Category",
+    "allCategories": "All categories",
+    "sort": "Sort",
+    "sortNewest": "Newest first",
+    "sortOldest": "Oldest first",
+    "sortName": "By name",
+    "emptyTitle": "No published plugins yet",
+    "emptyDescription": "Entries appear only after a GitHub release has been validated and approved by an administrator.",
+    "publishFirst": "Submit the first plugin",
+    "noDescription": "The author has not provided a description yet."
+  },
+  "categories": {
+    "productivity": "Productivity",
+    "editor": "Editor",
+    "ai": "Artificial intelligence",
+    "import-export": "Import and export",
+    "integrations": "Integrations",
+    "utilities": "Utilities",
+    "appearance": "Appearance",
+    "other": "Other"
+  },
+  "plugin": {
+    "description": "Description",
+    "manifest": "Manifest",
+    "versions": "Version history",
+    "openRelease": "Open GitHub release",
+    "repository": "Repository",
+    "author": "Author",
+    "runtime": "Runtime",
+    "apiVersion": "API version",
+    "published": "Published",
+    "categories": "Categories"
+  },
+  "compatibility": {
+    "title": "Compatibility limitations",
+    "warningCount": "Warnings: {count}",
+    "warnings": {
+      "runtime-system-community": "The system runtime is not intended for community plugins.",
+      "runtime-iframe-disabled": "The iframe runtime is present in the schema but disabled in the client.",
+      "settings-ui-unavailable": "Community settings UI is not available in the Worker runtime yet.",
+      "ai-tools-experimental": "AI tool registration is experimental and does not expose the full execution API yet.",
+      "markdown-extensions-unavailable": "Markdown extensions are not connected to the community runtime yet.",
+      "note-types-unavailable": "Custom note types are not connected yet.",
+      "views-unavailable": "Custom views are not connected yet.",
+      "vault-api-unavailable": "Vault permission is recognized, but Worker file RPC is not available yet.",
+      "network-api-unavailable": "Direct network access is blocked and host fetch RPC is not available yet.",
+      "clipboard-api-unavailable": "Clipboard RPC is not available in the community runtime yet.",
+      "editor-api-unavailable": "Editor RPC is not available in the community runtime yet.",
+      "native-api-unavailable": "Native capability RPC is not available in the community runtime yet."
+    }
+  },
+  "auth": {
+    "title": "Sign in with Neuro Notes",
+    "description": "Use your existing Neuro Notes account. Your password is sent only to the identity backend and is not stored by the marketplace.",
+    "identity": "Username or email",
+    "password": "Password",
+    "login": "Sign in",
+    "failed": "Sign in failed",
+    "totpTitle": "Two-factor verification",
+    "totpDescription": "Enter the code from your authenticator app or a recovery code.",
+    "totpCode": "Code",
+    "verify": "Verify"
+  },
+  "dashboard": {
+    "title": "Submissions",
+    "description": "Submit new plugins, releases, and description updates for manual moderation.",
+    "newSubmission": "New submission",
+    "emptyTitle": "No submissions yet",
+    "emptyDescription": "Provide a public GitHub repository and published release to start validation."
+  },
+  "submission": {
+    "status": { "pending": "Pending", "approved": "Published", "rejected": "Rejected" }
+  },
+  "publish": {
+    "title": "Submit a plugin",
+    "description": "The marketplace validates the public repository, release, manifest, and entry file. Code is never executed.",
+    "kind": "Submission type",
+    "kinds": { "new_plugin": "New plugin", "new_version": "New version", "metadata_update": "Update description" },
+    "repository": "GitHub repository",
+    "releaseTag": "Release tag",
+    "manifestPath": "Manifest path",
+    "categories": "Categories — up to three",
+    "translations": "Optional translations",
+    "summaryRu": "Russian summary",
+    "summaryEn": "English summary",
+    "descriptionRu": "Russian description",
+    "descriptionEn": "English description",
+    "validate": "Validate GitHub",
+    "submit": "Submit for moderation"
+  },
+  "moderation": {
+    "title": "Moderation queue",
+    "description": "Review source, manifest, and warnings before publishing an immutable version.",
+    "reason": "Moderator note",
+    "approve": "Approve",
+    "reject": "Reject",
+    "emptyTitle": "The queue is empty",
+    "emptyDescription": "There are no new submissions to review."
+  },
+  "docs": {
+    "title": "Developer documentation",
+    "description": "The actual community plugin API v1 contract and current Worker runtime limitations.",
+    "navigation": "Documentation sections"
+  },
+  "seo": {
+    "homeTitle": "Neuro Notes Plugins — extension catalog",
+    "homeDescription": "Catalog, documentation, and publication workflow for Neuro Notes community plugins.",
+    "catalogTitle": "Plugin catalog — Neuro Notes",
+    "docsTitle": "Plugin development — Neuro Notes",
+    "loginTitle": "Sign in — Neuro Notes Plugins",
+    "dashboardTitle": "My submissions — Neuro Notes Plugins",
+    "publishTitle": "Publish a plugin — Neuro Notes",
+    "moderationTitle": "Moderation — Neuro Notes Plugins"
+  }
+}

@@ -1,0 +1,12 @@
+.env
+app/.nuxt/
+app/.output/
+app/node_modules/
+app/coverage/
+app/playwright-report/
+app/test-results/
+app/.data/
+docs/node_modules/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+*.log

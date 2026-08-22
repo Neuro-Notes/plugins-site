@@ -1,0 +1,70 @@
+name: Marketplace Quality
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: neuro_notes_plugins
+          POSTGRES_USER: neuro_notes_plugins
+          POSTGRES_PASSWORD: test-password
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U neuro_notes_plugins"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+      redis:
+        image: redis:7.4-alpine
+        ports: ["6379:6379"]
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 12
+    defaults:
+      run:
+        working-directory: app
+    env:
+      DATABASE_URL: postgresql://neuro_notes_plugins:test-password@127.0.0.1:5432/neuro_notes_plugins
+      REDIS_URL: redis://127.0.0.1:6379
+      NUXT_DATABASE_URL: postgresql://neuro_notes_plugins:test-password@127.0.0.1:5432/neuro_notes_plugins
+      NUXT_REDIS_URL: redis://127.0.0.1:6379
+      NUXT_SESSION_ENCRYPTION_KEY: ci-session-encryption-key-with-more-than-32-characters
+      NUXT_BACKEND_BASE_URL: http://127.0.0.1:59999
+      NUXT_PUBLIC_SITE_URL: http://127.0.0.1:3000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: yarn
+          cache-dependency-path: |
+            app/yarn.lock
+            docs/yarn.lock
+      - run: corepack prepare yarn@1.22.22 --activate
+      - run: yarn install --frozen-lockfile
+      - run: yarn install --frozen-lockfile
+        working-directory: docs
+      - run: yarn db:migrate
+      - run: yarn styles:check
+      - run: yarn test:unit
+      - run: yarn test:integration
+      - run: yarn typecheck
+      - run: NN_SKIP_WEB_LITERTLM=1 yarn build
+      - run: yarn build
+        working-directory: docs
+      - run: yarn playwright install --with-deps chromium
+      - run: docker compose -f ../docker-compose.yml up --build --wait
+      - run: PLAYWRIGHT_EXTERNAL_SERVER=1 yarn test:e2e
+      - if: always()
+        run: docker compose -f ../docker-compose.yml logs --no-color
+      - if: always()
+        run: docker compose -f ../docker-compose.yml down --volumes

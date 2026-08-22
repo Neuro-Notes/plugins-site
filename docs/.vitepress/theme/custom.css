@@ -1,0 +1,105 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/roboto-mono/400.css";
+@import "@fontsource/roboto-mono/500.css";
+@import "@neuro-notes/design-tokens/theme.css";
+
+:root {
+  --vp-font-family-base: var(--font-family-sans);
+  --vp-font-family-mono: var(--font-family-mono);
+  --vp-c-bg: var(--color-bg);
+  --vp-c-bg-alt: var(--color-surface-muted);
+  --vp-c-bg-elv: var(--color-bg-elevated);
+  --vp-c-bg-soft: var(--color-surface);
+  --vp-c-brand-1: var(--color-primary);
+  --vp-c-brand-2: var(--color-primary-variant);
+  --vp-c-brand-3: var(--color-accent);
+  --vp-c-brand-soft: var(--color-info-soft);
+  --vp-c-text-1: var(--color-text-primary);
+  --vp-c-text-2: var(--color-text-secondary);
+  --vp-c-text-3: var(--color-text-muted);
+  --vp-c-divider: var(--color-border);
+  --vp-c-border: var(--color-border-strong);
+  --vp-button-brand-bg: var(--color-primary);
+  --vp-button-brand-hover-bg: var(--color-primary-variant);
+  --vp-button-brand-text: var(--color-on-primary);
+  --vp-custom-block-tip-border: var(--color-primary);
+  --vp-custom-block-tip-bg: var(--color-info-soft);
+  --vp-nav-bg-color: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  --vp-sidebar-bg-color: var(--color-surface-muted);
+}
+
+html,
+body {
+  font-family: var(--font-family-sans);
+}
+
+.VPNavBar {
+  border-bottom-color: var(--color-border);
+  backdrop-filter: blur(18px);
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700;
+}
+
+.VPNavBarTitle .logo {
+  border-radius: var(--radius-sm);
+}
+
+.VPDoc .container > .content {
+  border-radius: var(--radius-lg);
+}
+
+.vp-doc a {
+  text-decoration-color: color-mix(in srgb, var(--color-primary) 42%, transparent);
+  text-underline-offset: 3px;
+}
+
+.vp-doc div[class*='language-'],
+.vp-doc .custom-block {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.catalog-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  margin-left: 12px;
+  padding: 0 14px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  color: var(--color-on-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--motion-fast) var(--motion-ease-standard), box-shadow var(--motion-fast) var(--motion-ease-standard);
+}
+
+.catalog-link:hover {
+  color: var(--color-on-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md-hover);
+}
+
+.catalog-link-mobile {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+}
+
+@media (min-width: 768px) {
+  .catalog-link-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .VPNavBar .catalog-link:not(.catalog-link-mobile) {
+    display: none;
+  }
+}

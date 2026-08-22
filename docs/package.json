@@ -1,0 +1,19 @@
+{
+  "name": "neuro-notes-plugin-docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@1.22.22",
+  "scripts": {
+    "dev": "vitepress dev --host 0.0.0.0 --port 3001",
+    "build": "vitepress build",
+    "preview": "vitepress preview --host 0.0.0.0 --port 3001"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/roboto-mono": "^5.2.8",
+    "@neuro-notes/design-tokens": "file:../packages/design-tokens",
+    "vitepress": "1.6.4",
+    "vue": "^3.5.39"
+  }
+}
